@@ -1,46 +1,47 @@
 # Developer Toolkit
 
-A growing collection of developer utilities, automation scripts, and productivity tools built with Python.
+Tiny developer tools. Built daily. Designed to be useful.
 
-This repository is part of my daily coding practice and focuses on solving small real-world problems through simple and useful tools.
-
----
-
-## Features
-
-Current tools included:
-
-* File Organizer
-* Password Generator
-* JSON Formatter
-
-More tools and improvements will be added regularly.
+A growing collection of Python utilities, automation scripts, and productivity tools created through consistent daily coding practice.
 
 ---
 
-## Goals
+## Current Tools
 
-* Practice consistent daily coding
-* Improve Python and automation skills
-* Build useful developer utilities
-* Learn clean project structure and documentation
+| Tool               | Description                                         |
+| ------------------ | --------------------------------------------------- |
+| File Organizer     | Organizes files into folders by file type           |
+| Password Generator | Generates secure random passwords                   |
+| File Renamer       | Renames files automatically with numbered filenames |
+| QR Code Generator  | Generate QR code randomly                   |
 
 ---
 
-## Tech Stack
+## Why This Project Exists
 
-* Python
-* CLI Utilities
-* Automation Scripts
+This repository is part of my daily coding journey.
+
+Goals:
+
+* Practice Python consistently
+* Build useful real-world tools
+* Improve automation skills
+* Learn clean project structure
+* Grow a strong GitHub portfolio
 
 ---
 
 ## Project Structure
 
-```bash
+```bash id="t7xjlwm"
 developer-toolkit/
 │
 ├── tools/
+│   ├── file_organizer.py
+│   ├── password_generator.py
+│   ├── file_renamer.py
+│   └── qr_generator.py
+│
 ├── screenshots/
 ├── notes/
 ├── requirements.txt
@@ -53,13 +54,13 @@ developer-toolkit/
 
 Clone the repository:
 
-```bash
-git clone https://github.com/YOUR_USERNAME/developer-toolkit.git
+```bash id="dsy9j0"
+git clone https://github.com/jinniseattle-star/developer-toolkit.git
 ```
 
 Move into the project folder:
 
-```bash
+```bash id="0dy90a"
 cd developer-toolkit
 ```
 
@@ -67,27 +68,27 @@ Create virtual environment:
 
 ### Mac/Linux
 
-```bash
+```bash id="dhkqql"
 python3 -m venv venv
 source venv/bin/activate
 ```
 
 ### Windows
 
-```bash
+```bash id="7x2gsf"
 python -m venv venv
 venv\Scripts\activate
 ```
 
 Install dependencies:
 
-```bash
+```bash id="2lls7x"
 pip install -r requirements.txt
 ```
 
 Run a tool:
 
-```bash
+```bash id="6chcbk"
 python tools/file_organizer.py
 ```
 
@@ -96,16 +97,18 @@ python tools/file_organizer.py
 ## Future Plans
 
 * Build a unified CLI interface
-* Add more automation tools
-* Improve error handling
+* Add logging and error handling
+* Create more automation tools
+* Add screenshots and demos
 * Add tests and documentation
-* Create tool categories
 
 ---
 
-## Contributions
+## Upcoming Tools
 
-Suggestions and improvements are welcome.
-
----
+* Duplicate File Finder
+* Folder Size Analyzer
+* CSV Analyzer
+* Image Resizer
+* PDF Merger
 
