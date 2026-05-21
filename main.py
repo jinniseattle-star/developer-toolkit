@@ -1,4 +1,28 @@
 import os
+import shutil
+import typer
+from rich import print
+
+app = typer.Typer()
+
+CATEGORIES = {
+    "Images": [".png", ".jpg", ".jpeg", ".gif"],
+    "Videos": [".mp4", ".mov", ".avi"],
+    "Documents": [".pdf", ".docx", ".txt"],
+    "Code": [".py", ".js", ".html", ".css"],
+    "Archives": [".zip", ".rar"]
+}
+
+
+@app.command()
+def organize(folder_path: str):
+
+    print("\n=== AI File Organizer ===\n")
+
+    # Validate path
+    if not os.path.exists(folder_path):
+        print("[red]Error: Folder does not exist.[/red]")
+        raise typer.Exit()
 
     if not os.path.isdir(folder_path):
         print("[red]Error: Path is not a folder.[/red]")
@@ -10,11 +34,13 @@ import os
 
     for file in files:
 
+        # Skip hidden files
         if file.startswith("."):
             continue
 
         file_path = os.path.join(folder_path, file)
 
+        # Skip folders
         if os.path.isdir(file_path):
             continue
 
@@ -22,11 +48,13 @@ import os
 
         moved = False
 
+        # Find matching category
         for category, extensions in CATEGORIES.items():
 
             if extension in extensions:
 
                 category_folder = os.path.join(folder_path, category)
+
                 os.makedirs(category_folder, exist_ok=True)
 
                 destination = os.path.join(category_folder, file)
@@ -44,9 +72,11 @@ import os
 
                 break
 
+        # Uncategorized files
         if not moved:
 
             other_folder = os.path.join(folder_path, "Other")
+
             os.makedirs(other_folder, exist_ok=True)
 
             destination = os.path.join(other_folder, file)
