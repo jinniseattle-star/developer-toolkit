@@ -14,6 +14,7 @@ A growing collection of Python utilities, automation scripts, and productivity t
 | Password Generator | Generates secure random passwords                   |
 | File Renamer       | Renames files automatically with numbered filenames |
 | QR Code Generator  | Generate QR code randomly                   |
+| AI File Organizer | Advanced version of file organizer|
 
 ---
 
@@ -95,8 +96,6 @@ python tools/file_organizer.py
 ---
 
 ## Future Plans
-
-* Build a unified CLI interface
 * Add logging and error handling
 * Create more automation tools
 * Add screenshots and demos
@@ -111,4 +110,24 @@ python tools/file_organizer.py
 * CSV Analyzer
 * Image Resizer
 * PDF Merger
+
+## Tool Details
+
+---
+
+### 5. AI File Organizer
+
+Automatically organizes files into categorized folders such as Images, Documents, Videos, Code, and Archives.
+
+#### Features
+- Organizes files by extension
+- Automatically creates folders
+- Skips hidden/system files
+- Handles uncategorized files
+- CLI support with Typer
+
+#### Example Usage
+
+```bash
+python main.py ~/Downloads
 
